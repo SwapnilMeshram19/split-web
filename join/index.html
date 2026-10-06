@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Join a group: Expense Splitter</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 520px; margin: 48px auto; padding: 0 16px; line-height: 1.6; text-align: center; color: #1a1a1a; }
+    .code { font-size: 28px; letter-spacing: 4px; font-weight: 700; padding: 12px; border: 1px dashed #888; border-radius: 10px; margin: 16px 0; }
+    @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } }
+  </style>
+</head>
+<body>
+  <h1>You’re invited to a group</h1>
+  <p>Install <strong>Expense Splitter</strong>, then open this link again, or enter this code in the app under <em>Join a group</em>:</p>
+  <div class="code" id="code">—</div>
+  <p><small>Codes expire after 7 days. Ask the person who invited you for a new one if this doesn’t work.</small></p>
+  <script>
+    // Display only: the code is validated by the app and the server, never by this page.
+    var code = new URLSearchParams(location.search).get('code') || '';
+    document.getElementById('code').textContent = /^[A-Z0-9-]{4,20}$/i.test(code) ? code.toUpperCase() : '—';
+  </script>
+</body>
+</html>
