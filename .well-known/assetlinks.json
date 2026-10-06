@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.ssoftapp.split",
+      "sha256_cert_fingerprints": [
+        "95:FA:2E:33:F0:9D:89:EF:26:32:A5:9D:41:0D:E9:FC:A4:7C:CC:D9:9D:86:3B:7C:07:19:AE:8D:7F:1A:E7:5F"
+      ]
+    }
+  }
+]
